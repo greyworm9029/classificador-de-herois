@@ -18,7 +18,7 @@ func main() {
 
 	switch {
 	case heroe.exp < 1000:
-		fmt.Println("Se o XP for menor do que 1.000 = Ferro")
+		fmt.Println("Se o XP for menor do que 1.000 = Ferro");
 
 	case heroe.exp >= 1000 && heroe.exp <= 2000:
 		fmt.Println("Se o XP for entre 1.001 e 2.000 = Bronze");
