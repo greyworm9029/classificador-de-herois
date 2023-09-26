@@ -7,43 +7,57 @@ import (
 // Classificador de heróis
 
 func main() {
-	// Heroe armazena o nome e a experiência do herói
-	 heroe := struct {
+
+	// Herói representa as informações de um herói
+	type Heroi struct {
 		nome string
-		exp int
-	} {
-		nome: "Rodrigo",
-		exp: 1250,
+		exp  int
 	}
 
+	heroi := Heroi{
+		nome: "Daniel",
+		exp:  5000,
+	}
+
+	// Condições do programa
 	switch {
-	case heroe.exp < 1000:
-		fmt.Println("Se o XP for menor do que 1.000 = Ferro");
+	case heroi.exp < 1000:
+		fmt.Println("Se o XP for menor que 1000 = Ferro")
 
-	case heroe.exp >= 1000 && heroe.exp <= 2000:
-		fmt.Println("Se o XP for entre 1.001 e 2.000 = Bronze");
+	case heroi.exp >= 1000 && heroi.exp <= 2000:
+		fmt.Println("Se o XP for entre 1001 e 2000 = Bronze")
 
-	case heroe.exp >= 2001 && heroe.exp <= 5000:
-		fmt.Println("Se o XP for entre 2.001 e 5.000 = Prata");
+	case heroi.exp >= 2001 && heroi.exp <= 3000:
+		fmt.Println("Se o XP fo entre 2001 e 3000 = Prata")
 
-	case heroe.exp >= 6001 && heroe.exp <= 7000:
-		fmt.Println("Se o XP for entre 6.001 e 7.000 = Ouro");
+	case heroi.exp >= 3001 && heroi.exp <= 4000:
+		fmt.Println("Se o XP for entre 3001 e 4000 = Ouro")
 
-	case heroe.exp >= 7001 && heroe.exp <= 8000:
-		fmt.Println("Se o XP for entre 7.001 e 8.000 = Platina");
+	case heroi.exp >= 4001 && heroi.exp <= 5000:
+		fmt.Println("Se o XP for entre 4001 e 5000 = Platina")
 
-	case heroe.exp >= 8001 && heroe.exp <= 9000:
-		fmt.Println("Se o XP for entre 8.001 e 9.000 = Ascendente");
+	case heroi.exp >= 5001 && heroi.exp <= 6000:
+		fmt.Println("Se o XP for entre 5001 e 6000 = Diamante")
 
-	case heroe.exp >= 9001 && heroe.exp <= 10000:
-		fmt.Println("Se o XP for entre 9.001 e 10.000 = Imortal");
+	case heroi.exp >= 6001 && heroi.exp <= 7000:
+		fmt.Println("Se o XP for entre 6001 e 7000 = Esmeralda")
 
-	default: 
-	fmt.Println("Se o XP for maior ou igual a 10.001 = Radiante");
+	case heroi.exp >= 7001 && heroi.exp <= 8000:
+		fmt.Println("Se o XP for entre 7001 e 8000 = Mestre")
+
+	case heroi.exp >= 8001 && heroi.exp <= 9000:
+		fmt.Println("Se o XP for entre 8001 e 9000 = Grão Mestre")
+
+	case heroi.exp >= 9001 && heroi.exp <= 10000:
+		fmt.Println("Se o XP for entre 9001 e 10000 = Ancião")
+
+	default:
+		fmt.Println("Se o XP for igual ou maior do que 10001 = Desafiante")
 	}
 
-	for heroe.exp < 1000 {
-		fmt.Printf("O herói com o nome de %s está no nível %d!\n", heroe.nome, heroe.exp)
-		heroe.exp += 1000
+	for heroi.exp < 5001 {
+		fmt.Printf("O jogador de nome %s está no nível %d!\n", heroi.nome, heroi.exp)
+		heroi.exp += 5000
 	}
+
 }
